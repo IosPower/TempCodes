@@ -41,6 +41,38 @@ class LoginViewModel: NSObject {
         })
     }
     
+    /// loginApi
+    ///
+    /// - Parameters:
+    ///   - success: return block success - empty
+    ///   - failure: return block failure - response dic
+    func loginApiNew(success: @escaping () -> Void, failure: @escaping (_ errorResponse: [String: Any]) -> Void) {
+        let param: [String: Any] = ["email": email.removeWhiteSpace() ,
+                                    "password": password]
+        ApiManager.sharedInstance.multipartRequest(parameter: param, serverUrl: "", httpMethod: .post, success: { [weak self] (response) in
+            let jsonData = JSON(response)
+            
+            let data = jsonData[ModelKeys.ResponseKeys.data].dictionaryValue
+            
+            if data[ModelKeys.ResponseKeys.status] == 200 {
+                print(jsonData)
+                //                self?.loginModel = LoginModel(json: jsonData[ModelKeys.ResponseKeys.result], imagePath: "")
+                DispatchQueue.main.async {
+                    success()
+                }
+            } else {
+                var errorMessage = Messages.Common.somethingWrong
+                if let message = jsonData[ModelKeys.ResponseKeys.message].string {
+                    errorMessage = message
+                }
+                failure([ModelKeys.ResponseKeys.message: errorMessage])
+            }
+            }, failure: { (response, error) in
+                let errorRes: [String: Any] = ["message": error?.localizedDescription ?? ""]
+                failure(errorRes)
+        })
+    }
+    
     func exampleNormalLoginRequest(success: @escaping () -> Void, failure: @escaping (_ errorResponse: [String: Any]) -> Void) {
         
         ProgressLoader.showProgressHudWithMessage()
