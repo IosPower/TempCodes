@@ -1,0 +1,56 @@
+PODS:
+  - Alamofire (5.4.1)
+  - DropDown (2.3.13)
+  - IQKeyboardManagerSwift (6.5.6)
+  - JVFloatLabeledTextField (1.2.2)
+  - Kingfisher (6.0.1)
+  - ReachabilitySwift (5.0.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftLint (0.42.0)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - DropDown (from `https://github.com/AssistoLab/DropDown.git`)
+  - IQKeyboardManagerSwift
+  - JVFloatLabeledTextField
+  - Kingfisher
+  - ReachabilitySwift
+  - SVProgressHUD
+  - SwiftLint
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - JVFloatLabeledTextField
+    - Kingfisher
+    - ReachabilitySwift
+    - SVProgressHUD
+    - SwiftLint
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  DropDown:
+    :git: https://github.com/AssistoLab/DropDown.git
+
+CHECKOUT OPTIONS:
+  DropDown:
+    :commit: 2ab6f6ce19f0117d1a76ea043ef8f57722c65d16
+    :git: https://github.com/AssistoLab/DropDown.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  DropDown: bf260fd688978138019ad7d94f63a2362dad85ba
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
+  Kingfisher: adde87a4f74f6a3845395769354efff593581740
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: e613da19ba1ae57b5e9deaad09b42e2240cade81
+
+COCOAPODS: 1.9.1

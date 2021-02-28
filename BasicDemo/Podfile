@@ -1,0 +1,16 @@
+platform :ios, '11.0'
+use_frameworks!
+
+target 'BasicDemo' do
+ 
+pod 'IQKeyboardManagerSwift'
+pod 'Alamofire'
+pod 'ReachabilitySwift'
+pod 'SwiftLint'
+pod 'SwiftyJSON'
+pod 'SVProgressHUD'
+pod 'JVFloatLabeledTextField'
+pod 'Kingfisher'
+pod 'DropDown', :git=> 'https://github.com/AssistoLab/DropDown.git'
+
+end
