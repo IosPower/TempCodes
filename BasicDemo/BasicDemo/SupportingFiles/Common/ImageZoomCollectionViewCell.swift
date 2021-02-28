@@ -1,6 +1,6 @@
 //
 //  ImageZoomCollectionViewCell.swift
-//  4SaleNbuy
+//  
 //
 //  Created by Admin on 30/01/21.
 //

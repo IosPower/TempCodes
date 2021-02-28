@@ -1,6 +1,6 @@
 //
 //  LocalizationKeys.swift
-//  4SaleNbuy
+//  
 //
 //  Created by Admin on 07/12/20.
 //
@@ -16,7 +16,7 @@ struct LocalizationKeys {
 
     struct LocalMessages {
         ///
-        static let appTitle = "4SaleNbuy"
+        static let appTitle = ""
         ///
         static let chooseGallary = "Choose from Photo gallery."
         ///
