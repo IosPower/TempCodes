@@ -69,6 +69,113 @@ class HomeVC: UIViewController {
         self.present(actionSheetController, animated: true, completion: nil)
     }
     
+    
+    func upsideDown(_ int : Int)
+    {
+        for i in 0...int
+        {
+            print(String.init(repeating: "*", count: int-i))
+        }
+        
+        //        ********
+        //        *******
+        //        ******
+        //        *****
+        //        ****
+        //        ***
+        //        **
+        //        *
+    }
+    
+    func numberMiddle(numberOfRow: Int) {
+
+               var no = 1
+               for i in 1..<numberOfRow {
+                   for _ in 1..<(numberOfRow-i) {
+                       print(" ", terminator: " ")
+                   }
+                   for j in 1...i {
+                       print("\(j)", terminator: " ")
+                       no = j
+                   }
+                   for _ in 1..<no {
+                       no -= 1
+                       print("\(no)", terminator: " ")
+                   }
+                   print(" ")
+               }
+        
+//                    1
+//                  1 2 1
+//                1 2 3 2 1
+//              1 2 3 4 3 2 1
+//            1 2 3 4 5 4 3 2 1
+//          1 2 3 4 5 6 5 4 3 2 1
+//        1 2 3 4 5 6 7 6 5 4 3 2 1
+    }
+    
+    func starprintTraingle(_ int : Int)
+    {
+        for i in 1...int
+        {
+            print(String(repeating: " ", count: i - 1) + String(repeating: "*", count: (int+1) - i) + String(repeating: "*", count: int - i))
+            
+            //       ***************
+            //        *************
+            //         ***********
+            //          *********
+            //           *******
+            //            *****
+            //             ***
+            //              *
+        }
+        
+        for i in 1...int
+        {
+            print(String(repeating: " ", count: int - i) + String(repeating: "*", count: i))
+            
+            //                   *
+            //                  **
+            //                 ***
+            //                ****
+            //               *****
+            //              ******
+            //             *******
+            //            ********
+            
+        }
+        
+        for i in 1...int
+        {
+          //  print(String(repeating: " ", count: int - i) + String(repeating: "*", count: i) + String(repeating: "*", count: i-1))
+            
+           print(String(repeating: " ", count: int - i) + String(repeating: "\(i)", count: i*2 - 1))
+//                   *
+//                  ***
+//                 *****
+//                *******
+//               *********
+//              ***********
+//             *************
+//            ***************
+        }
+//        https://awesomelyswift.blogspot.com/2019/01/programs-to-print-different-patterns-in.html
+        for index in 1...int {
+            var strnew = ""
+            strnew = String(repeating: " ", count: int-index)
+            
+            
+            
+            for j in 1...(2 * index - 1) {
+                strnew = strnew + String(repeating: "\(j)", count: 1)
+            }
+            print(strnew)
+        }
+        
+       
+            
+    }
+    
 //    // MARK: -   ImagePicker Method
 //
 //   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]){
